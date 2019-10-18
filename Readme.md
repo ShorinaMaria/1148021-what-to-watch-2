@@ -1,7 +1,7 @@
 # Личный проект «Что посмотреть» [![Build status][travis-image]][travis-url]
 
 * Студент: [Мария Шорина](https://up.htmlacademy.ru/react/2/user/1148021).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Булах](https://htmlacademy.ru/profile/id1213123).
 
 ---
 
