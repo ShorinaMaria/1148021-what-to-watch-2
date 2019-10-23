@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const App = (props) => {
-  const {movies} = props;
+  const {movies, onTitleClick} = props;
 
   return (
     <div>
@@ -105,7 +105,7 @@ const App = (props) => {
                 <div className="small-movie-card__image">
                   <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt={movie} width="280" height="175" />
                 </div>
-                <h3 className="small-movie-card__title">
+                <h3 className="small-movie-card__title" onClick={onTitleClick}>
                   <a className="small-movie-card__link" href="movie-page.html">{movie}</a>
                 </h3>
               </article>
@@ -137,7 +137,8 @@ const App = (props) => {
 };
 
 App.propTypes = {
-  movies: PropTypes.arrayOf(PropTypes.string).isRequired
+  movies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onTitleClick: PropTypes.func.isRequired
 };
 
 export default App;

@@ -10,6 +10,7 @@ ReactDOM.render(
         `Motherless Brooklyn`,
         `The Good Liar`
       ]}
+      onTitleClick={() => {}}
     />,
     document.querySelector(`#root`)
 );
