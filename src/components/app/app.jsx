@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import MoviesList from '../movies-list/movies-list.jsx';
 
 const App = (props) => {
-  const {movies, onTitleClick} = props;
+  const {movies} = props;
 
   return (
     <div>
@@ -98,20 +98,7 @@ const App = (props) => {
             </li>
           </ul>
 
-          <div className="catalog__movies-list">
-            {movies.map((movie, i) => (
-
-              <article key={`${movie}_${i}`} className="small-movie-card catalog__movies-card">
-                <div className="small-movie-card__image">
-                  <img src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg" alt={movie} width="280" height="175" />
-                </div>
-                <h3 className="small-movie-card__title" onClick={onTitleClick}>
-                  <a className="small-movie-card__link" href="movie-page.html">{movie}</a>
-                </h3>
-              </article>
-
-            ))}
-          </div>
+          <MoviesList movies={movies}/>
 
           <div className="catalog__more">
             <button className="catalog__button" type="button">Show more</button>
@@ -137,8 +124,7 @@ const App = (props) => {
 };
 
 App.propTypes = {
-  movies: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onTitleClick: PropTypes.func.isRequired
+  movies: MoviesList.propTypes.movies
 };
 
 export default App;
