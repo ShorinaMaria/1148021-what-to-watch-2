@@ -1,12 +1,14 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import App from "./app";
 import films from '../../mocks/films';
+import MovieCard from './movie-card';
 
-it(`renders start screen correctly`, () => {
+it(`renders movie card correctly`, () => {
+  const film = films[0];
+
   const tree = renderer.create(
-      <App
-        movies={films}
+      <MovieCard
+        movie={film}
       />
   ).toJSON();
 
