@@ -260,16 +260,21 @@ exports[`renders start screen correctly 1`] = `
         <article
           className="small-movie-card catalog__movies-card"
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
-            <img
-              alt="Fantastic Beasts: The Crimes of Grindelwald"
+            <video
               height="175"
-              src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+              muted={true}
+              poster="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
               width="280"
-            />
+            >
+              <source
+                src="https://gcs-vimeo.akamaized.net/exp=1573000788~acl=%2A%2F955222150.mp4%2A~hmac=1accc82b8704acf030feeca7f5b6ac09298c895bccf94e693e0d349fe53cf23c/vimeo-prod-skyfire-std-us/01/1982/10/259911724/955222150.mp4"
+              />
+            </video>
           </div>
           <h3
             className="small-movie-card__title"
@@ -285,16 +290,21 @@ exports[`renders start screen correctly 1`] = `
         <article
           className="small-movie-card catalog__movies-card"
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
-            <img
-              alt="Pulp fiction"
+            <video
               height="175"
-              src="img/pulp-fiction.jpg"
+              muted={true}
+              poster="img/pulp-fiction.jpg"
               width="280"
-            />
+            >
+              <source
+                src="https://gcs-vimeo.akamaized.net/exp=1573000301~acl=%2A%2F668495786.mp4%2A~hmac=33503a4f9f333a7e30e82b43a7e9dcb5121f22e4b50739090220c3f8c80c45c0/vimeo-prod-skyfire-std-us/01/4698/7/198491112/668495786.mp4"
+              />
+            </video>
           </div>
           <h3
             className="small-movie-card__title"
@@ -310,16 +320,21 @@ exports[`renders start screen correctly 1`] = `
         <article
           className="small-movie-card catalog__movies-card"
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
-            <img
-              alt="Snatch"
+            <video
               height="175"
-              src="img/snatch.jpg"
+              muted={true}
+              poster="img/snatch.jpg"
               width="280"
-            />
+            >
+              <source
+                src="https://gcs-vimeo.akamaized.net/exp=1573000470~acl=%2A%2F667835929.mp4%2A~hmac=37f0020dafd32b69dccd360ebaa5267890df6136ed4f2a713cac3a291a743b08/vimeo-prod-skyfire-std-us/01/4667/7/198339738/667835929.mp4"
+              />
+            </video>
           </div>
           <h3
             className="small-movie-card__title"
@@ -335,16 +350,21 @@ exports[`renders start screen correctly 1`] = `
         <article
           className="small-movie-card catalog__movies-card"
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
-            <img
-              alt="Moonrise kingdom"
+            <video
               height="175"
-              src="img/moonrise-kingdom.jpg"
+              muted={true}
+              poster="img/moonrise-kingdom.jpg"
               width="280"
-            />
+            >
+              <source
+                src="https://gcs-vimeo.akamaized.net/exp=1573000605~acl=%2A%2F672540334.mp4%2A~hmac=fcd0972204ec5907666c622faf03d4c357be0f0cd1a3c8ec4a8d659ceb8ea574/vimeo-prod-skyfire-std-us/01/4881/7/199406593/672540334.mp4"
+              />
+            </video>
           </div>
           <h3
             className="small-movie-card__title"
@@ -360,16 +380,21 @@ exports[`renders start screen correctly 1`] = `
         <article
           className="small-movie-card catalog__movies-card"
           onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
         >
           <div
             className="small-movie-card__image"
           >
-            <img
-              alt="Macbeth"
+            <video
               height="175"
-              src="img/macbeth.jpg"
+              muted={true}
+              poster="img/macbeth.jpg"
               width="280"
-            />
+            >
+              <source
+                src="https://gcs-vimeo.akamaized.net/exp=1573000682~acl=%2A%2F675826480.mp4%2A~hmac=c11b78cc30c8c11190c0075246f35f01cf25c418f8d5f0c2e5108fd8b36f04ae/vimeo-prod-skyfire-std-us/01/32/8/200160788/675826480.mp4"
+              />
+            </video>
           </div>
           <h3
             className="small-movie-card__title"

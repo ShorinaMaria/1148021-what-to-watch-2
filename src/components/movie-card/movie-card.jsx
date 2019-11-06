@@ -1,27 +1,60 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import VideoPlayer from '../video-player/video-player.jsx';
 
-const MovieCard = ({movie, onMouseEnter}) => {
-  const {title, img} = movie;
+class MovieCard extends React.PureComponent {
+  constructor(props) {
+    super(props);
 
-  return (
-    <article className="small-movie-card catalog__movies-card"
-      onMouseEnter={() => onMouseEnter({title, img})}>
-      <div className="small-movie-card__image">
-        <img src={`img/${img}`} alt={title} width="280" height="175" />
-      </div>
-      <h3 className="small-movie-card__title">
-        <a className="small-movie-card__link" href="movie-page.html">{title}</a>
-      </h3>
-    </article>
-  );
+    this.state = {
+      isPlaying: false
+    };
+    this._timeoutId = null;
+  }
 
-};
+  handleMouseEnter() {
+    this.props.onMouseEnter(this.props.movie);
+
+    this._timeoutId = setTimeout(() => {
+      this.setState({isPlaying: true});
+    }, 1000);
+  }
+
+  handleMouseLeave() {
+    clearTimeout(this._timeoutId);
+    this.setState({isPlaying: false});
+  }
+
+  render() {
+    const {movie} = this.props;
+    const {title, img, trailer} = movie;
+
+    return (
+      <article className="small-movie-card catalog__movies-card"
+        onMouseEnter={this.handleMouseEnter.bind(this)}
+        onMouseLeave={this.handleMouseLeave.bind(this)}
+      >
+        <div className="small-movie-card__image">
+          <VideoPlayer
+            src={trailer}
+            img={`img/${img}`}
+            isPlaying={this.state.isPlaying}
+          />
+        </div>
+        <h3 className="small-movie-card__title">
+          <a className="small-movie-card__link" href="movie-page.html">{title}</a>
+        </h3>
+      </article>
+    );
+  }
+
+}
 
 export const MoviePropType = {
   movie: PropTypes.shape({
     title: PropTypes.string,
-    img: PropTypes.string
+    img: PropTypes.string,
+    trailer: PropTypes.string
   })
 };
 

@@ -4,16 +4,21 @@ exports[`renders movie card correctly 1`] = `
 <article
   className="small-movie-card catalog__movies-card"
   onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
 >
   <div
     className="small-movie-card__image"
   >
-    <img
-      alt="Fantastic Beasts: The Crimes of Grindelwald"
+    <video
       height="175"
-      src="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
+      muted={true}
+      poster="img/fantastic-beasts-the-crimes-of-grindelwald.jpg"
       width="280"
-    />
+    >
+      <source
+        src="https://gcs-vimeo.akamaized.net/exp=1573000788~acl=%2A%2F955222150.mp4%2A~hmac=1accc82b8704acf030feeca7f5b6ac09298c895bccf94e693e0d349fe53cf23c/vimeo-prod-skyfire-std-us/01/1982/10/259911724/955222150.mp4"
+      />
+    </video>
   </div>
   <h3
     className="small-movie-card__title"
