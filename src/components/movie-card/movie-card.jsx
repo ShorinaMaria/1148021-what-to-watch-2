@@ -25,9 +25,12 @@ class MovieCard extends React.PureComponent {
     this.setState({isPlaying: false});
   }
 
+  componentWillUnmount() {
+    clearTimeout(this._timeoutId);
+  }
+
   render() {
-    const {movie} = this.props;
-    const {title, img, trailer} = movie;
+    const {title, img, trailer} = this.props.movie;
 
     return (
       <article className="small-movie-card catalog__movies-card"
