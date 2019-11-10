@@ -9,6 +9,13 @@ Enzyme.configure({adapter: new Adapter()});
 it(`VideoPlayer works`, () => {
   const video = films[0];
 
+  const playStub = jest
+    .spyOn(window.HTMLMediaElement.prototype, `play`)
+    .mockImplementation(() => {});
+  const loadStub = jest
+    .spyOn(window.HTMLMediaElement.prototype, `load`)
+    .mockImplementation(() => {});
+
   const videoPlayer = mount(
       <VideoPlayer
         isPlaying={true}
@@ -17,6 +24,10 @@ it(`VideoPlayer works`, () => {
       />
   );
 
-  expect(videoPlayer.prop(`isPlaying`)).toBe(true);
+  videoPlayer.setProps({isPlaying: false});
+  expect(playStub).toHaveBeenCalled();
+  expect(loadStub).toHaveBeenCalled();
 
+  playStub.mockRestore();
+  loadStub.mockRestore();
 });

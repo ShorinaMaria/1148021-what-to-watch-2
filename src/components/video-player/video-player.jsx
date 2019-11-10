@@ -24,11 +24,6 @@ class VideoPlayer extends React.PureComponent {
     }
   }
 
-  componentWillUnmount() {
-    const video = this._videoRef.current;
-    video.src = ``;
-  }
-
   render() {
     const {src, img} = this.props;
 
