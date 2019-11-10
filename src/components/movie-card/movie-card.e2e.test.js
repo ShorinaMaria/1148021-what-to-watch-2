@@ -30,18 +30,18 @@ it(`MovieCard works`, (done) => {
   expect(mouseEnterHandler).toHaveBeenCalledWith(film);
 
   setTimeout(() => {
-    done();
 
     expect(playStub).toHaveBeenCalled();
-    playStub.mockRestore(); // todo: what for ?
+    playStub.mockRestore();
     expect(movieCard.state(`isPlaying`)).toBe(true);
 
     movieCard.find(`.small-movie-card`).simulate(`mouseleave`);
 
     expect(loadStub).toHaveBeenCalled();
-    loadStub.mockRestore(); // todo: what for ?
+    loadStub.mockRestore();
     expect(movieCard.state(`isPlaying`)).toBe(false);
 
+    done();
   }, 1001);
 
 });
